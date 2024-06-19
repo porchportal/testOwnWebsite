@@ -78,13 +78,13 @@ header {
 .top-nav ul li a:hover::after {
     content: '';
     position: absolute;
-    left: -10px;
-    right: -10px;
+    left: -15px;
+    right: -15px;
     top: 50%;
     transform: translateY(-50%);
-    width: calc(100% + 20px);
-    height: 120%;
-    background-color: rgba(255, 255, 255, 0.05);
+    width: calc(100% + 30px);
+    height: 150%;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     z-index: -1;
     text-shadow: 2px 2px 10px white;
@@ -196,4 +196,126 @@ section {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 80px 20px;
+    /* Increased padding for the section */
+    background-color: #d8f1f9;
+    /* Match body background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    /* Use a darker color for better readability */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    /* Increased max-width for a larger container */
+    width: 100%;
+    padding: 60px;
+    /* Increased padding inside the container */
+    background-color: #333;
+    /* Darker background for contrast */
+    border-radius: 20px;
+    /* Slightly more rounded corners */
+    color: white;
+    /* White text color for better contrast */
+}
+
+.contact-info {
+    max-width: 45%;
+}
+
+.contact-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info img {
+    margin-right: 10px;
+    width: 24px;
+    /* Size of icons */
+}
+
+.social-icons a {
+    margin-right: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    /* Size of social media icons */
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    /* Enlarge icons slightly on hover */
+}
+
+
+.contact-form {
+    max-width: 50%;
+    width: 100%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444
+    color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #ff4d5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e3444f;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #101010;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer .heart {
+    color: #ff4d5a;
+    /* Red color for the heart symbol */
 }
