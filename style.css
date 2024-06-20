@@ -25,7 +25,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
+    width: 120%;
     height: 70vh;
     background-image: url('/image/IMG_5747%202.jpg');
     background-size: cover;
@@ -100,12 +100,13 @@ header {
 }
 
 .hero-content .highlight {
-    color: #ff4d5a;
+    color: rgb(60, 160, 242);
+    font-size: 40px;
 }
 /* Section styling */
 section {
     padding: 60px 20px;
-    min-height: 100vh;
+    min-height: 120vh;
     /* Ensures each section takes at least the full viewport height */
     text-align: center;
 }
@@ -149,6 +150,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     padding: 80px 0;
 }
 
@@ -156,10 +158,13 @@ section {
     display: flex;
     align-items: flex-start;
     max-width: 1200px;
+    height: 200%;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
     padding: 40px;
+    
+    
 }
 
 .about-photo img {
@@ -174,6 +179,10 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     /* Adds a shadow effect */
     transition: transform 0.3s ease;
+    width: 300px;
+        height: 437px;
+        object-fit: cover;
+        object-position: 50% 0;
 
 }
 .about-photo img:hover {
@@ -217,7 +226,7 @@ section {
     align-items: flex-start;
     max-width: 1400px;
     /* Increased max-width for a larger container */
-    width: 100%;
+    width: 200%;
     padding: 60px;
     /* Increased padding inside the container */
     background-color: #333;
@@ -226,6 +235,7 @@ section {
     /* Slightly more rounded corners */
     color: white;
     /* White text color for better contrast */
+    z-index: 1;
 }
 
 .contact-info {
@@ -242,12 +252,14 @@ section {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
 .contact-info img {
     margin-right: 10px;
-    width: 24px;
+    width: 40px;
     /* Size of icons */
+    
 }
 
 .social-icons a {
@@ -269,11 +281,13 @@ section {
 .contact-form {
     max-width: 50%;
     width: 100%;
+    z-index: 2;
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 
 .contact-form input,
@@ -299,10 +313,12 @@ section {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    z-index: 2;
 }
 
 .contact-form button:hover {
     background-color: #e3444f;
+    z-index: 2;
 }
 
 /* Footer Styling */
@@ -316,5 +332,6 @@ section {
 
 .footer .heart {
     color: #ff4d5a;
+    z-index: 2;
     /* Red color for the heart symbol */
 }
