@@ -41,6 +41,7 @@ header {
     position: relative;
     /* background-attachment: scroll; */
 }
+
 @media (min-width: 800px) {
     #header {
         background-attachment: fixed;
@@ -50,6 +51,35 @@ header {
         background-color: #333;
         /* Adds color to the sides if necessary */
     }
+}
+
+.bubble-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(72, 207, 255, 0.7), 0 0 50px rgba(72, 207, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.bubble-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(72, 207, 255, 1), 0 0 75px rgba(72, 207, 255, 0.8);
+}
+
+.journal-photo img {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #fdfdfd;
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.journal-photo img:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .top-nav {
@@ -62,12 +92,46 @@ header {
 .top-nav .logo {
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 2px 2px 10px black;
-    color: #49fbea;
-    gap: 20px
+    color: #333;
+    gap: 20px;
 }
 
-/*nothing*/
+/* Experience and Projects Grid Layout */
+.experience-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.experience-photo img,
+.journal-photo img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-photo img:hover,
+.journal-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.bubble-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(72, 207, 255, 0.7), 0 0 50px rgba(72, 207, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.bubble-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(72, 207, 255, 1), 0 0 75px rgba(72, 207, 255, 0.8);
+}
 
 .top-nav ul {
     list-style: none;
@@ -77,16 +141,14 @@ header {
 }
 
 .top-nav ul li a {
-    color: black;
+    color: #333;
     text-decoration: none;
     font-size: 18px;
-    text-shadow: 1px 1px 20px white;
-
 }
 
 .top-nav ul li a:hover {
-    color: rgb(100, 221, 100);
-    text-shadow: 2px 2px 10px black;
+    color: #00aaff;
+    text-shadow: 2px 2px 10px rgba(0, 170, 255, 0.5);
     position: relative;
 }
 
@@ -107,7 +169,7 @@ header {
 
 .hero-content {
     max-width: 800px;
-    color: black;
+    color: #fff;
 }
 
 .hero-content h1 {
@@ -116,14 +178,14 @@ header {
 }
 
 .hero-content .highlight {
-    color: rgb(60, 160, 242);
+    color: #00aaff;
     font-size: 40px;
 }
 
 /* Section styling */
 section {
     padding: 60px 20px;
-    min-height: 120vh;
+    min-height: 100vh;
     /* Ensures each section takes at least the full viewport height */
     text-align: center;
 }
@@ -136,6 +198,7 @@ section {
     margin: 20px 0;
     border-radius: 8px;
     padding: 40px;
+    color: #333;
 }
 
 /* Example to differentiate sections */
